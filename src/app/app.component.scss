@@ -1,0 +1,22 @@
+// app-container covers the view and centers it's children
+.app-container {
+  // Size
+  height: 100%;
+  width: 100%;
+
+  // Alignment
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// contains the inner component
+.container {
+  // Size
+  height: 90%;
+  width: 80%;
+
+  // Design
+  background: #F5F5F5;
+  color: #212121;
+}

@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ * Default Style
+ */
+
+// Fill Screen
+html {
+  // Size
+  height: 100vh;
+  width: 100vw;
+
+  // Defaults
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+body {
+  // Size
+  height: 100%;
+  width: 100%;
+
+  // Design
+  background: #212121; //#F5F5F5;
+}

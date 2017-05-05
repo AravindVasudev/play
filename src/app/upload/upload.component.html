@@ -1,0 +1,8 @@
+<div class="upload"
+    (click)="f.click()"
+    (dragover)="onDragOver($event)"
+    (dragleave)="onDragLeave($event)"
+    (drop)="onDrop($event)">
+  <input type="file" [hidden]="true" #f (change)="onChange($event)">
+  {{dropTitle}}
+</div>

@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "../node_modules/normalize-css/normalize.css",
+        "styles.scss",
+        "../node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

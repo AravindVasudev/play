@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<div class="app-container">
+  <md-card class="container">
+    <app-upload (fileRead)="onFile($event)" [hidden]="fileComponentView"></app-upload>
+    <app-video [hidden]="videoComponentView" [videoFile]="videoFile"></app-video>
+  </md-card>
+</div>

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  fileComponentView: Boolean = false;
+  videoComponentView: Boolean = true;
+  videoFile: File;
+  
+  onFile(file) {
+    this.videoFile = file;
+    console.log(file);
+    this.fileComponentView = true;
+    this.videoComponentView = false;
+  }
 }
