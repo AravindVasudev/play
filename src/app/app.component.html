@@ -1,4 +1,4 @@
-<div class="app-container">
+<div class="app-container" (dragover)="onDragOver($event)" (drop)="onDrop($event)">
   <md-card class="container">
     <!-- Upload Component -->
     <app-upload (fileRead)="onFile($event)" [hidden]="fileComponentView"></app-upload>

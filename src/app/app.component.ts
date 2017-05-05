@@ -18,4 +18,16 @@ export class AppComponent {
     this.fileComponentView = true;
     this.videoComponentView = false;
   }
+
+  // When a File is dragged over prevent default action
+  onDragOver(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  // When a File is dropped prevent default action
+  onDrop(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
 }

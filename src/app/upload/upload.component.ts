@@ -30,7 +30,7 @@ export class UploadComponent {
     this.dropTitle = 'DROP FILE HERE OR CLICK TO UPLOAD';
   }
 
-  // When a file is dropped
+  // When a File is dropped
   onDrop(event) {
     event.preventDefault();
     event.stopPropagation();

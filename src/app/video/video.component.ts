@@ -23,4 +23,20 @@ export class VideoComponent implements OnInit, OnChanges {
       this.player.play();
     }
   }
+
+  // When a File is dragged over
+  onDragOver(event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
+  // When a File is dropped
+  onDrop(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    let src = URL.createObjectURL(event.dataTransfer.files[0]);
+    this.player.src = src;
+    this.player.play();
+  }
 }
