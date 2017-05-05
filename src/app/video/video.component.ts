@@ -20,6 +20,7 @@ export class VideoComponent implements OnInit, OnChanges {
       // Create BLOB URL and load the player
       let src = URL.createObjectURL(this.videoFile);
       this.player.src = src;
+      this.player.play();
     }
   }
 }
