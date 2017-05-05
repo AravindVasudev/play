@@ -17,7 +17,7 @@ export class VideoComponent implements OnInit, OnChanges {
     if(this.videoFile !== undefined) {
       console.log(this.videoFile);
 
-      let src = URL.createObjectURL( this.videoFile );
+      let src = URL.createObjectURL(this.videoFile);
       this.player.src = src;
       this.player.play();
     }
