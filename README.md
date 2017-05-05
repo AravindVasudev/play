@@ -3,7 +3,7 @@ A simple experimental video player that plays local videos.
 
 ## Demo
 
-Check it out: [https://aravindvasudevan.me/playr/]()
+Check it out: [https://aravindvasudevan.me/playr/](https://aravindvasudevan.me/playr/)
 
 ## screenshots
 
