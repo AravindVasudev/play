@@ -9,10 +9,12 @@ export class AppComponent {
   fileComponentView: Boolean = false;
   videoComponentView: Boolean = true;
   videoFile: File;
-  
+
   onFile(file) {
+    // Pass Video Object to Video Component
     this.videoFile = file;
-    console.log(file);
+
+    // Switch Component
     this.fileComponentView = true;
     this.videoComponentView = false;
   }

@@ -1,6 +1,8 @@
 <div class="app-container">
   <md-card class="container">
+    <!-- Upload Component -->
     <app-upload (fileRead)="onFile($event)" [hidden]="fileComponentView"></app-upload>
+    <!-- Video Player Component -->
     <app-video [hidden]="videoComponentView" [videoFile]="videoFile"></app-video>
   </md-card>
 </div>

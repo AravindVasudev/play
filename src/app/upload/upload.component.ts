@@ -8,12 +8,13 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class UploadComponent {
   dropTitle: String  = 'DROP FILE HERE OR CLICK TO UPLOAD';
   @Output() fileRead = new EventEmitter<File>();
-  constructor() { }
 
+  // When File is Selected
   onChange(event) {
     this.emitFile(event.target.files[0]);
   }
 
+  // When a File is dragged over
   onDragOver(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -21,6 +22,7 @@ export class UploadComponent {
     this.dropTitle = 'DROP';
   }
 
+  // When a File is dragged out
   onDragLeave(event) {
     event.preventDefault();
     event.stopPropagation();
@@ -28,15 +30,16 @@ export class UploadComponent {
     this.dropTitle = 'DROP FILE HERE OR CLICK TO UPLOAD';
   }
 
+  // When a file is dropped
   onDrop(event) {
     event.preventDefault();
     event.stopPropagation();
 
-    this.emitFile(event.dataTransfer.files[0]);
-
     this.dropTitle = 'DROPPED';
+    this.emitFile(event.dataTransfer.files[0]);
   }
 
+  // Emits the File Object
   emitFile(file) {
     this.fileRead.emit(file);
   }
