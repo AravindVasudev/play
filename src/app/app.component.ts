@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
+import { VideoComponent } from './video/video.component';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  @ViewChild(VideoComponent) videoComponent: VideoComponent;
   fileComponentView: Boolean = false;
   videoComponentView: Boolean = true;
-  videoFile: File;
 
   onFile(file) {
-    // Pass Video Object to Video Component
-    this.videoFile = file;
+    // Play Video
+    this.videoComponent.play(file);
 
     // Switch Component
     this.fileComponentView = true;
@@ -29,5 +30,13 @@ export class AppComponent {
   onDrop(event) {
     event.preventDefault();
     event.stopPropagation();
+  }
+
+  // When Enter is pressed toggle video play State
+  @HostListener('document:keyup', ['$event'])
+  onKeyUp(ev) {
+    if(ev.keyCode === 32) {
+      this.videoComponent.toggleVideoState();
+    }
   }
 }
